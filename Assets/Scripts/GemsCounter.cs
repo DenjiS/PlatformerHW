@@ -16,15 +16,15 @@ public class GemsCounter : MonoBehaviour
 
     private void OnEnable()
     {
-        _gemsWallet.OnChanged += WriteCount;
+        _gemsWallet.Changed += OnWalletChanged;
     }
 
     private void OnDisable()
     {
-        _gemsWallet.OnChanged -= WriteCount;
+        _gemsWallet.Changed -= OnWalletChanged;
     }
 
-    private void WriteCount(int count)
+    private void OnWalletChanged(int count)
     {
         _textElement.text = _textBeforeCount + count.ToString();
     }
