@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         _isGrounded = CheckGrounded();
-        _animator.SetBool("isGrounded", _isGrounded);
+        _animator.SetBool(AnimatorCommands.IsGrounded, _isGrounded);
     }
 
     private void Move()
@@ -56,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
                 transform.localScale = _leftDirectionScale;
 
             transform.Translate(new Vector3(horizontaldirection * _moveSpeed * Time.deltaTime, 0, 0));
-            _animator.SetBool("isRunning", true);
+            _animator.SetBool(AnimatorCommands.IsRunning, true);
         }
         else
         {
-            _animator.SetBool("isRunning", false);
+            _animator.SetBool(AnimatorCommands.IsRunning, false);
         }
     }
 
