@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown("w") &&
+        if (Input.GetKeyDown(KeyCode.W) &&
             _isGrounded)
         {
             _rigidbody.AddForce(_jumpVector, ForceMode2D.Impulse);

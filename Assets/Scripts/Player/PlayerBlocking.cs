@@ -15,7 +15,7 @@ public class PlayerBlocking : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey("s"))
+        if (Input.GetKey(KeyCode.S))
         {
             IsBlocking = true;
         }
