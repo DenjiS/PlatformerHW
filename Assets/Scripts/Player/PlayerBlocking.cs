@@ -26,9 +26,4 @@ public class PlayerBlocking : MonoBehaviour
 
         _animator.SetBool(AnimatorCommands.IsBlocking, IsBlocking);
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (IsBlocking) { }
-    }
 }
