@@ -1,8 +1,6 @@
 public static class AnimatorCommands
 {
-    public static string IsRunning { get; } = "isRunning";
-
-    public static string IsGrounded { get; } = "isGrounded";
-
-    public static string IsBlocking { get; } = "isBlocking";
+    public const string IsRunning = "isRunning";
+    public const string IsGrounded = "isGrounded";
+    public const string IsBlocking = "isBlocking";
 }
